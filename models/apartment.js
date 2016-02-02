@@ -1,25 +1,24 @@
-// 'use strict';
+'use strict';
 
-// var mongoose = require('mongoose');
-// var moment = require('moment');
-// // var jwt = require('jwt-simple');
-// // var JWT_SECRET = process.env.JWT_SECRET;
+var mongoose = require('mongoose');
+var moment = require('moment');
+var Apartment = require('../models/apartment');
+var Tenant; 
 
-// var Apartment; 
+var tenantSchema = new mongoose.Schema({
+  name:{type:String}, 
+  apartment: { type: mongoose.Schema.Types.ObjectId, ref: "Apartment" }, 
+  hasHome: {type:Boolean, default:false}
+});
+  
 
-// var apartmentSchema = new mongoose.Schema({
-//   totalRooms:{type:Number},
-//   availableRooms:{type:Number},
-//   rentPerRoom: {type:Number},
-//   imageURL:{type:String}
-// })
+  cost: { type: String }, 
+  tenant: { type: String },  
+  rooms: { type: String },
+  roomsA: [{ type: String }],
 
-// /*personSchema.pre('save', function(next) {
-//   this.age = moment().diff(moment(this.birthday), 'years');
-//   console.log(this.age);
-//   next();
-// });*/
 
-// Apartment = mongoose.model('Apartment', apartmentSchema);
 
-// module.exports = Apartment;
+Tenant = mongoose.model('Tenant', tenantSchema);
+
+module.exports = Tenant;
