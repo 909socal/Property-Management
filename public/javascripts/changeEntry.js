@@ -12,6 +12,8 @@ function changeEntry() {
     entry.cost = ($('#cost').val());
     entry.rooms = $('#rooms').val();
     entry.roomsA = $('#roomsA').val();
+    entry.image = $('#image').val();
+
 
 
     var itemId = $('#id').val();

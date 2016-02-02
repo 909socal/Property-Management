@@ -8,7 +8,7 @@ var Tenant;
 var tenantSchema = new mongoose.Schema({
   name:{type:String}, 
   apartment: { type: mongoose.Schema.Types.ObjectId, ref: "Apartment" }, 
-  hasHome: {type:Boolean, default:false}
+  home: {type:Boolean, default:false}
 });
   
 
@@ -16,6 +16,7 @@ var tenantSchema = new mongoose.Schema({
   tenant: { type: String },  
   rooms: { type: String },
   roomsA: [{ type: String }],
+  image: {type:String}
 
 
 

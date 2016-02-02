@@ -15,7 +15,7 @@ router.delete('/:itemId', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
     var item = new Item(req.body);
-
+    console.log(req.body);
     item.save(function (err, savedItem) {
         console.log('inside item.save in operations.js. savedItem is:', savedItem);
         res.send(savedItem);

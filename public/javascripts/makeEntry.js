@@ -10,13 +10,16 @@ function makeEntry() {
     var cost = $('#cost').val();
     var rooms = $('#rooms').val();
     var roomsA = $('#roomsA').val();
+    var image = $('#image').val();
+
 
     var apartmentInfo = {
         apartment: apartment,
         tenant: tenant,
         cost: cost,
         rooms: rooms,
-        roomsA: roomsA
+        roomsA: roomsA,
+        image: image
     };
     console.log('make entry', apartmentInfo)
     $.post('/operations', apartmentInfo)

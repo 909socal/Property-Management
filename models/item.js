@@ -7,7 +7,8 @@ var itemSchema = new mongoose.Schema({
 	tenant:{type:String, require:true},
 	cost:{type:Number, require:true},
 	rooms:{type:Number, require:true},
-	roomsA:{type:Number, require:true}
+	roomsA:{type:Number, require:true},
+	image:{type:String, require:true}
 
 });
 

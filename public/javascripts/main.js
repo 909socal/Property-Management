@@ -58,12 +58,15 @@ function makeTable() {
     var $apartmentth = $('<th>').addClass('item-col col-md-1 col-xs-1').text('apartment');
     var $costth = $('<th>').addClass('item-col col-md-1 col-xs-1').text('cost');
     var $tenantth = $('<th>').addClass('item-col col-md-2 col-xs-2').text('tenant');
+    var $imageth = $('<th>').addClass('item-col col-md-2 col-xs-2').text('image');
     var $roomth = $('<th>').addClass('item-col col-md-1 col-xs-1').text('rooms');
     var $roomath = $('<th>').addClass('item-col col-md-1 col-xs-1').text('Rooms Availble');
+
 // two more rows
     $headers.append($apartmentth);
     $headers.append($costth);
     $headers.append($tenantth);
+    $headers.append($imageth);
     $headers.append($roomth);
     $headers.append($roomath);
 
@@ -74,6 +77,7 @@ function makeTable() {
         var $item = $('<td>').addClass('item-col col-md-2 col-xs-2 text-left').text(entry.apartment);
         var $cost = $('<td>').addClass('cost-col col-md-1 col-xs-1').text('$' + entry.cost);
         var $number = $('<td>').addClass('number-col col-md-1 col-xs-1').text('' + entry.tenant);
+        var $image = $('<img>').addClass('thumb').attr('src', entry.image);
         var $roomsOne = $('<td>').addClass('number-col col-md-1 col-xs-1').text('' + entry.rooms);
         var $roomsLetter = $('<td>').addClass('number-col col-md-1 col-xs-1').text('' + entry.roomsA);
 
@@ -85,6 +89,7 @@ function makeTable() {
         $row.append($item);
         $row.append($cost);
         $row.append($number);
+        $row.append($image);
         $row.append($roomsOne);
         $row.append($roomsLetter);
         $row.append($details);

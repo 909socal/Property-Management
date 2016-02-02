@@ -15,7 +15,8 @@ router.get('/itemDetails:itemId', function (req, res, next) {
             tenant: item.tenant,
             cost: item.cost,
             rooms: item.rooms,
-            roomsA: item.roomsA
+            roomsA: item.roomsA,
+            image: item.image
         });
     });
 });
@@ -32,8 +33,9 @@ router.get('/changeEntry:itemId', function (req, res, next) {
             tenant: item.tenant,
             cost: item.cost,
             rooms: item.rooms,
-            roomsA: item.roomsA
-            // id: item._id.toString()
+            roomsA: item.roomsA,
+            image: item.image
+         
         });
     });
 });
